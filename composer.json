@@ -18,6 +18,7 @@
         "filament/filament": "^3.2",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
+        "livewire/volt": "^1.6",
         "timokoerber/laravel-one-time-operations": "^1.4"
     },
     "require-dev": {
@@ -65,6 +66,16 @@
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
             "@php artisan migrate --graceful --ansi"
+        ],
+        "clearcache-app": [
+            "@php artisan optimize:clear",
+            "@php artisan filament:clear-cached-components"
+        ],
+        "clear-jobs": [
+            "@php artisan queue:flush",
+            "@php artisan queue:clear",
+            "@php artisan queue:prune-batches",
+            "@php artisan queue:prune-failed"
         ]
     },
     "extra": {
