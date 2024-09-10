@@ -169,6 +169,21 @@
         }
     }
 
+    &.style13 {
+        li {
+            font-size: 18px;
+            font-weight: 600;
+            @include xl {
+                font-size: 16px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 35px;
+            }
+
+        }
+    }
+
     &.list-two-column {
         ul {
             display: grid;

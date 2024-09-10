@@ -1035,7 +1035,7 @@
 .team-box4 {
     position: relative;
     overflow: hidden;
-    background-color: #EFF1F9; 
+    background-color: #EFF1F9;
     border-radius: 20px;
 
 
@@ -1137,6 +1137,7 @@
                 visibility: visible;
 
             }
+
             img {
                 transform: scale(1.08);
             }
@@ -1150,3 +1151,388 @@
 }
 
 /* Team box4 end ---------------------------------- */
+
+/* Team box5 Start ---------------------------------- */
+.team-box5 {
+    position: relative;
+    overflow: hidden;
+    background-color: $white-color;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 30px;
+
+    .team-img-wrap {
+        position: relative;
+        transition: 0.4s;
+    }
+
+    .team-img {
+        overflow: hidden;
+        position: relative;
+        border-radius: 20px;
+        background: #EFF1F9;
+        margin-bottom: 25px;
+        z-index: 2;
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(28, 28, 37, 0.8);
+            border-radius: 20px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1;
+            transition: 0.4s ease-in-out;
+
+        }
+
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+    .th-social {
+        position: absolute;
+        bottom: 45%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: 0.4s;
+        width: max-content;
+        z-index: 3;
+
+        a {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.3s;
+
+            &:nth-child(1) {
+                transition-delay: 0s;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 0.1s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 0.2s;
+            }
+
+            &:nth-child(4) {
+                transition-delay: 0.3s;
+            }
+        }
+    }
+
+    .box-title {
+        margin-bottom: 0px;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .team-desig {
+        color: $body-color;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: -0.3em;
+    }
+
+    .team-content {
+        text-align: center;
+    }
+
+    &:hover {
+        .team-img-wrap {
+            border-color: $theme-color;
+        }
+
+        .team-img {
+            &:before {
+                opacity: 1;
+                visibility: visible;
+
+            }
+
+            img {
+                transform: scale(1.08);
+            }
+        }
+
+        .th-social a {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
+.team-area10 {
+    max-width: 1760px;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+
+    @include xxl {
+        max-width: 100%;
+        border-radius: 0;
+    }
+}
+
+/* Team box5 end ---------------------------------- */
+
+/* Team grid start --------------------------*/
+.team-grid {
+    &.style2 {
+        background-color: #16181D;
+        padding: 0;
+        border-radius: 12px 12px 30px 30px;
+        border: 1px solid transparent;
+        transition: all 0.4s ease-in-out;
+
+        .team-img {
+            position: relative;
+            margin-bottom: 0;
+            border-radius: 12px;
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            z-index: 2;
+
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: $theme-color;
+                border-radius: 12px;
+                transition: all 0.4s ease-in-out;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 1;
+
+            }
+
+            img {
+                border-radius: 12px;
+            }
+        }
+
+        .box-content {
+            text-align: left;
+            padding: 30px;
+        }
+
+        .box-title {
+            color: $white-color;
+            margin-bottom: 0px;
+        }
+
+        .box-desig {
+            color: #A1A6B0;
+        }
+
+        .team-social {
+            display: block;
+            top: unset;
+            bottom: 110px;
+            right: 10px;
+        }
+
+        .play-btn {
+
+            &:before,
+            &:after {
+                display: none;
+            }
+
+            > i {
+                --icon-size: 36px;
+                background-color: $white-color;
+                color: $theme-color;
+                font-size: 18px;
+
+                &:hover {
+                    transform: rotate(0deg);
+                }
+            }
+
+        }
+
+        &:hover {
+            background: linear-gradient(180.63deg, rgba(22, 24, 29, 0) -5.59%, rgba(62, 102, 243, 0.2) 99.45%);
+            border: 1px solid $theme-color;
+
+            .team-img {
+                &:before {
+                    opacity: 0.6;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+/* Team box7 Start ---------------------------------- */
+.team-box7 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: #16181D;
+
+
+    .team-img-wrap {
+        position: relative;
+        transition: 0.4s;
+    }
+
+    .team-img {
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        background: #EFF1F9;
+        mask-size: cover;
+        z-index: 2;
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, $theme-color 0%, $theme-color2 100%);
+            border-radius: 20px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1;
+            transition: 0.4s ease-in-out;
+
+        }
+
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+    .box-share {
+        text-align: center;
+        margin-top: -28px;
+    }
+
+    .icon-btn {
+        background-color: rgba(255, 255, 255, 0.10);
+        border-radius: 50%;
+
+
+        i {
+            background: linear-gradient(180deg, $theme-color 0%, $theme-color2 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .th-social {
+        position: absolute;
+        bottom: 45%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: 0.4s;
+        width: max-content;
+        z-index: 3;
+
+        a {
+            color: $title-color;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $white-color;
+                color: $theme-color;
+            }
+
+            &:nth-child(1) {
+                transition-delay: 0s;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 0.1s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 0.2s;
+            }
+
+            &:nth-child(4) {
+                transition-delay: 0.3s;
+            }
+        }
+    }
+
+    .box-title {
+        color: $white-color;
+        font-weight: 600;
+        margin-bottom: 0px;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .team-desig {
+        color: $body-color;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: -0.3em;
+    }
+
+    .team-content {
+        padding: 20px 30px 30px 30px;
+        text-align: center;
+    }
+
+    &:hover {
+        .team-img-wrap {
+            border-color: $theme-color;
+        }
+
+        .team-img {
+            &:before {
+                opacity: 0.8;
+                visibility: visible;
+
+            }
+
+            img {
+                transform: scale(1.08);
+            }
+        }
+
+        .icon-btn {
+            background-color: transparent;
+            border-color: transparent;
+
+            i {
+                color: $white-color;
+                background: $white-color;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+        }
+
+        .th-social a {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
+/* Team box7 end ---------------------------------- */

@@ -21,17 +21,27 @@ body {
 		background-color: #F3F2EA;
 	}
 	&.theme-blue3 {
-		--theme-color: #3E66F3; 
+        --theme-color: #3E66F3;
 	}
 
+    &.theme-blue4 {
+        --theme-color: #3E66F3;
+        --theme-color2: #0031DD;
+    }
+
+    &.theme-blue5 {
+        --theme-color: #3E66F3;
+        background-color: #0E0E0E;
+    }
+
 	&.bg-dark {
-		background-color: #0E0E0E !important; 
+        background-color: #0E0E0E !important;
 		--theme-color: #02CE80;
 		--theme-color2: #7BD706;
 	}
 	&.bg-como {
-		--theme-color: #407360; 
-	} 
+        --theme-color: #407360;
+    }
 }
 
 iframe {

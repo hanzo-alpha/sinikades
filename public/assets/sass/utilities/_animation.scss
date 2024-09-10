@@ -33,7 +33,7 @@
 
     100% {
         transform: scale(1.9);
-        opacity: 0; 
+        opacity: 0;
     }
 }
 .fancy-animation {
@@ -140,7 +140,7 @@
     }
 }
 
-@keyframes titleFill { 
+@keyframes titleFill {
     0% {
         width: 0;
     }
@@ -235,7 +235,7 @@
     }
 }
 
-@keyframes footerLine { 
+@keyframes footerLine {
     0% {
         left: 40px;
     }
@@ -256,6 +256,20 @@
     }
 }
 
+@keyframes cloudAni {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 .fadein,
 .scalein,
 .slidetopleft,

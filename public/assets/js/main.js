@@ -148,7 +148,7 @@
         }
     })
 
-      /*----------- 04.1.  One Page Nav ----------*/ 
+    /*----------- 04.1.  One Page Nav ----------*/
       function onePageNav(element) {
         if ($(element).length > 0) {
             $(element).each(function () {
@@ -162,8 +162,8 @@
                     scrollTop: target.offset().top - 10
                     }, 1000);
                 };
-    
-                }); 
+
+                });
             });
             })
         }
@@ -174,7 +174,7 @@
     /*---------- 05. Scroll To Top ----------*/
     // progressAvtivation
     if($('.scroll-top')) {
-        
+
         var scrollTopbtn = document.querySelector('.scroll-top');
         var progressPath = document.querySelector('.scroll-top path');
         var pathLength = progressPath.getTotalLength();
@@ -182,7 +182,7 @@
         progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
         progressPath.style.strokeDashoffset = pathLength;
         progressPath.getBoundingClientRect();
-        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+        progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
         var updateProgress = function () {
             var scroll = $(window).scrollTop();
             var height = $(document).height() - $(window).height();
@@ -190,7 +190,7 @@
             progressPath.style.strokeDashoffset = progress;
         }
         updateProgress();
-        $(window).scroll(updateProgress);	
+        $(window).scroll(updateProgress);
         var offset = 50;
         var duration = 750;
         jQuery(window).on('scroll', function() {
@@ -199,7 +199,7 @@
             } else {
                 jQuery(scrollTopbtn).removeClass('show');
             }
-        });				
+        });
         jQuery(scrollTopbtn).on('click', function(event) {
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, duration);
@@ -228,7 +228,7 @@
         var borderColor = $(this).data('border');
         $(this).css('--th-border-color', borderColor);
     });
-      
+
     if ($('[data-mask-src]').length > 0) {
         $('[data-mask-src]').each(function () {
           var mask = $(this).attr('data-mask-src');
@@ -244,7 +244,7 @@
 
 
     /*----------- 07. Global Slider ----------*/
-    
+
     $('.th-slider').each(function () {
 
         var thSlider = $(this);
@@ -257,7 +257,7 @@
 
         var autoplayconditon = settings['autoplay'];
 
-        var sliderDefault = { 
+        var sliderDefault = {
             slidesPerView: 1,
             spaceBetween: settings['spaceBetween'] ? settings['spaceBetween'] : 24,
             loop: settings['loop'] == false ? false : true,
@@ -265,11 +265,11 @@
             autoplay: autoplayconditon ? autoplayconditon : {delay: 6000, disableOnInteraction: false},
             navigation: {
                 nextEl: nextArrow.get(0),
-                prevEl: prevArrow.get(0),  
+                prevEl: prevArrow.get(0),
             },
             pagination: {
                 el: paginationEl.get(0),
-                clickable: true, 
+                clickable: true,
                 renderBullet: function (index, className) {
                     return '<span class="' + className + '" aria-label="Go to Slide ' + (index + 1) + '"></span>';
                 },
@@ -310,15 +310,15 @@
 
             if (swiper) {
                 if ($(this).data('slider-prev')) {
-                    swiper.slidePrev(); 
+                    swiper.slidePrev();
                 } else {
-                    swiper.slideNext(); 
+                    swiper.slideNext();
                 }
             }
         }
-    }); 
+    });
 
-    /*-------------- 08. Slider Tab -------------*/ 
+    /*-------------- 08. Slider Tab -------------*/
     $.fn.activateSliderThumbs = function (options) {
         var opt = $.extend(
             {
@@ -327,51 +327,51 @@
             },
             options
         );
-    
+
         return this.each(function () {
             var $container = $(this);
             var $thumbs = $container.find(opt.tabButton);
             var $line = $('<span class="indicator"></span>').appendTo($container);
-    
+
             var sliderSelector = $container.data("slider-tab");
             var $slider = $(sliderSelector);
-    
+
             var swiper = $slider[0].swiper;
-    
+
             $thumbs.on("click", function (e) {
                 e.preventDefault();
                 var clickedThumb = $(this);
-    
+
                 clickedThumb.addClass("active").siblings().removeClass("active");
                 linePos(clickedThumb, $container);
-    
+
                 if (opt.sliderTab) {
                     var slideIndex = clickedThumb.index();
                     swiper.slideTo(slideIndex);
                 }
             });
-    
+
             if (opt.sliderTab) {
                 swiper.on("slideChange", function () {
                     var activeIndex = swiper.realIndex;
                     var $activeThumb = $thumbs.eq(activeIndex);
-    
+
                     $activeThumb.addClass("active").siblings().removeClass("active");
                     linePos($activeThumb, $container);
                 });
-    
+
                 var initialSlideIndex = swiper.activeIndex;
                 var $initialThumb = $thumbs.eq(initialSlideIndex);
                 $initialThumb.addClass("active").siblings().removeClass("active");
                 linePos($initialThumb, $container);
             }
-    
+
             function linePos($activeThumb) {
                 var thumbOffset = $activeThumb.position();
-    
+
                 var marginTop = parseInt($activeThumb.css('margin-top')) || 0;
                 var marginLeft = parseInt($activeThumb.css('margin-left')) || 0;
-    
+
                 $line.css("--height-set", $activeThumb.outerHeight() + "px");
                 $line.css("--width-set", $activeThumb.outerWidth() + "px");
                 $line.css("--pos-y", thumbOffset.top + marginTop + "px");
@@ -379,7 +379,7 @@
             }
         });
     };
-    
+
     if ($(".testi-thumb").length) {
         $(".testi-thumb").activateSliderThumbs({
             sliderTab: true,
@@ -532,7 +532,7 @@
     /* magnificPopup img view */
     $(".popup-image").magnificPopup({
         type: "image",
-        mainClass: 'mfp-zoom-in', 
+        mainClass: 'mfp-zoom-in',
         removalDelay: 260,
         gallery: {
             enabled: true,
@@ -542,7 +542,7 @@
     /* magnificPopup video view */
     $(".popup-video").magnificPopup({
         type: "iframe",
-        mainClass: 'mfp-zoom-in', 
+        mainClass: 'mfp-zoom-in',
         removalDelay: 260,
     });
 
@@ -552,27 +552,27 @@
         midClick: true,
     });
 
-    /*  footer animation  */ 
-    $(".th-screen").length && $(window).on("scroll", function () {   
+    /*  footer animation  */
+    $(".th-screen").length && $(window).on("scroll", function () {
         ! function (t, a = 0) {
             var i = $(window).scrollTop(),
-                o = i + $(window).height(), 
+                o = i + $(window).height(),
                 s = $(t).offset().top;
             return s + $(t).height() - parseInt(a) <= o && s >= i
         }
         (".th-screen", 200) ? $(".th-screen").removeClass("th-visible"): $(".th-screen").addClass("th-visible")
-    }),  
-    
+    }),
+
 
     function content_ready_scripts() {
-        const boxes = gsap.utils.toArray('.global-image'); 
+        const boxes = gsap.utils.toArray('.global-image');
         boxes.forEach(img => {
             gsap.to(img, {
                 scrollTrigger: {
                     trigger: img,
                     start: "top 70%",
                     end: "bottom bottom",
-                    toggleClass: "active", 
+                    toggleClass: "active",
                     once: true,
                 }
             });
@@ -581,7 +581,7 @@
 
     if($('.th-anim').length){
         gsap.registerPlugin(ScrollTrigger);
-        let revealContainers = document.querySelectorAll(".th-anim"); 
+        let revealContainers = document.querySelectorAll(".th-anim");
         revealContainers.forEach((container) => {
           let image = container.querySelector("img");
           let tl = gsap.timeline({
@@ -602,7 +602,7 @@
             ease: Power2.out
           });
         });
-    }    
+    }
 
 
     /*---------- 13. Section Position ----------*/
@@ -650,7 +650,7 @@
     }
 
     /*----------- 14. Filter ----------*/
-      /*----------- 15. Filter ----------*/  
+    /*----------- 15. Filter ----------*/
       $(".filter-active").imagesLoaded(function () {
         var $filter = ".filter-active",
             $filterItem = ".filter-item",
@@ -682,7 +682,7 @@
             });
         }
     });
-    
+
 
     // Active specifix
     $('.filter-active-cat1').imagesLoaded(function () {
@@ -708,7 +708,7 @@
                 });
             });
 
-            // Menu Active Class 
+            // Menu Active Class
             $($filterMenu).on('click', 'button', function (event) {
                 event.preventDefault();
                 $(this).addClass('active');
@@ -814,7 +814,7 @@
     /*----------- 20. Tilt Active ----------*/
     $('.tilt-active').tilt({
         maxTilt: 7,
-        perspective: 1000,   
+        perspective: 1000,
     })
 
     /*---------- 22. Circle Progress ----------*/
@@ -864,10 +864,10 @@
                     color: pathColor,
                 }
                 }).on('circle-animation-progress', function (event, progress, stepValue) {
-                $(this).find('.circle-num').text((stepValue*100).toFixed(0) + "%");  
+                    $(this).find('.circle-num').text((stepValue * 100).toFixed(0) + "%");
                 }).stop();
             }
-        }); 
+        });
     }
 
     // Show animated elements
@@ -993,30 +993,30 @@
     $(".btn").on("mouseleave", function() {
         cursor.removeClass("active");
         follower.removeClass("active");
-    });   
+    });
     // CURSOR End
 
     // /*----------- 00.GSAP Register ----------*/
     window.gsap.registerPlugin(
         window.TweenMax
     );
-    
+
     // /*----------- 00.Color Scheme ----------*/
-    $('.color-switch-btns button').each(function () {   
+    $('.color-switch-btns button').each(function () {
         // Get color for button
         const button = $(this);
-        const color = button.data('color'); 
+        const color = button.data('color');
         button.css('--theme-color', color);
 
         // Change theme color on click
         button.on('click', function () {
             const clickedColor = $(this).data('color');
-            $('body').css('--theme-color', clickedColor);  
+            $('body').css('--theme-color', clickedColor);
         });
-    }); 
+    });
 
-    $(document).on('click','.switchIcon',function() { 
-        $('.color-scheme-wrap').toggleClass('active');  
+    $(document).on('click', '.switchIcon', function () {
+        $('.color-scheme-wrap').toggleClass('active');
     });
 
     // /*----------- Pricing-switch & Tab ----------*/
@@ -1051,13 +1051,13 @@
         y.classList.toggle("hide");
         });
     }
-    
-    
+
+
     // /*----------- 00. Right Click Disable ----------*/
     //   window.addEventListener('contextmenu', function (e) {
-    //     // do something here... 
-    //     e.preventDefault();  
-    //   }, false); 
+    //     // do something here...
+    //     e.preventDefault();
+    //   }, false);
 
     // /*----------- 00. Inspect Element Disable ----------*/
     //   document.onkeydown = function (e) {
@@ -1077,5 +1077,5 @@
     //       return false;
     //     }
     //   }
-    
+
 })(jQuery);

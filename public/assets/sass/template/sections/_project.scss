@@ -650,7 +650,7 @@
         }
 
         @include vxs {
-            inset: 10px; 
+            inset: 10px;
         }
     }
 
@@ -673,7 +673,7 @@
         border-radius: 50%;
         border: none;
         color: $theme-color;
-        font-size: 18px; 
+        font-size: 18px;
         margin-bottom: 15px;
 
         &:hover {
@@ -723,6 +723,83 @@
     }
 }
 
+/*project-card start --------------------------*/
+.project-area9 {
+    background-color: #EFF1F9;
+}
+
+.project-card {
+    &.style2 {
+        .project-img {
+            border-radius: 20px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 0;
+                width: 100%;
+                border-radius: 20px;
+                background-color: $theme-color;
+                opacity: 0;
+                -webkit-transition: 0.4s ease-in-out;
+                transition: 0.4s ease-in-out;
+                z-index: 1;
+                border-radius: inherit;
+            }
+        }
+
+        .project-content-wrap {
+            max-width: calc(100% - var(--space) * 2 - 111px);
+
+            @media(max-width: 1699px) {
+                max-width: calc(100% - var(--space) * 2 - 30px);
+            }
+        }
+
+        .project-content {
+            background-color: $white-color;
+            padding: 11px 23px;
+            border-radius: 10px;
+        }
+
+        .project-subtitle {
+            color: $theme-color;
+        }
+
+        .box-title {
+            font-size: 18px;
+            color: $title-color;
+
+            a {
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+
+        .icon-btn {
+            --btn-size: 70px;
+            background-color: $theme-color;
+            border-radius: 50%;
+            color: $white-color;
+            top: 0;
+        }
+
+        &:hover {
+            .project-img {
+                &:before {
+                    height: 100%;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+/*project-card end --------------------------*/
+
 /*project-card3 end --------------------------*/
 /* Project Details ---------------------------------- */
 .project-inner-box {
@@ -734,3 +811,86 @@
         padding: 20px;
     }
 }
+
+
+/*project-card start --------------------------*/
+.project-card {
+    &.style3 {
+        --space: 0px;
+        border-radius: 30px;
+
+        .project-img {
+            border-radius: 20px;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        .project-content {
+            position: relative;
+            background-color: transparent;
+            border-radius: 0px;
+            padding: 20px 40px;
+            z-index: 2;
+
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, #3E66F3 0%, #0031DD 100%);
+                clip-path: path("M-13.0656 17.2667C-8.12633 6.72988 2.46095 0 14.098 0H222.716C236.147 0 247.941 8.92694 251.589 21.8532L267.253 77.3697C272.939 97.5197 256.758 117.149 235.893 115.413L-5.01712 95.3679C-25.8475 93.6347 -38.565 71.6641 -29.6932 52.7379L-13.0656 17.2667Z");
+                z-index: -1;
+            }
+        }
+
+        .project-subtitle {
+            color: $white-color;
+            margin-bottom: 3px;
+        }
+
+        .box-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: $white-color;
+
+            a {
+                &:hover {
+                    color: $title-color;
+                }
+            }
+        }
+
+        .icon-btn {
+            --btn-size: 70px;
+            background-color: $white-color;
+            border-radius: 50%;
+            color: $theme-color;
+            top: 30px;
+            right: 30px;
+            transition: all 0.4s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+
+            &:hover {
+                background-color: $title-color;
+                color: $white-color;
+            }
+
+            @include md {
+                --btn-size: 50px;
+                top: 20px;
+            }
+            right: 20px;
+        }
+
+        &:hover {
+            .icon-btn {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+/*project-card end --------------------------*/

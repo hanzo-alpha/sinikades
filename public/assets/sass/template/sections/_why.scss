@@ -359,7 +359,7 @@
     }
 
     @include xs {
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
     }
 
     .box-text {
@@ -499,7 +499,7 @@
     gap: 30px;
     border-left: 1px solid rgba(255, 255, 255, 0.10);
     padding: 60px;
-    // padding-left: 60px;  
+    // padding-left: 60px;
     // margin-left: 60px;
 
     @include lg {
@@ -676,6 +676,10 @@
                 font-weight: 600;
                 line-height: 30px;
                 letter-spacing: -0.48px;
+
+                @include vxs {
+                    font-size: 18px !important;
+                }
             }
         }
     }
@@ -811,4 +815,65 @@
 
 .why-thumb-4 {
     text-align: center;
+}
+
+.sec-text3 {
+    max-width: 600px;
+    color: #A1A6B0;
+}
+
+/* choose area start ----------------------*/
+.choose-feature5 {
+    display: flex;
+    gap: 24px;
+    width: 564px;
+    @include sm {
+        width: 100%;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .box-title {
+        color: $white-color;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .box-text {
+        color: #A1A6B0;
+        margin-bottom: -0.4rem;
+    }
+}
+
+.choose-image5 {
+    position: relative;
+    margin-right: -20px;
+    z-index: 2;
+
+    @include lg {
+        margin: 0;
+        text-align: center;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(62, 102, 243, 0.2);
+        filter: blur(100px);
+        z-index: -1;
+
+    }
+
+    img {
+    }
+
+    .choose-line {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        z-index: -1;
+    }
 }

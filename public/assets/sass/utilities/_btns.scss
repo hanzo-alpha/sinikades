@@ -170,6 +170,7 @@
         color: $theme-color;
         border-radius: 100px;
         padding: 18px 44px;
+
         &:hover {
             color: $white-color;
         }
@@ -208,38 +209,20 @@
         }
     }
 
-    .th-gradient-btn {
-        position: relative;
-        overflow: hidden;
-        vertical-align: middle;
-        display: inline-block;
-        text-transform: capitalize;
-        text-align: center;
-        color: $white-color;
-        font-family: $title-font;
+    &.th-gradient-btn {
         font-size: 16px;
-        font-weight: 500;
-        line-height: 1;
-        padding: 16px 35px;
+        text-transform: capitalize;
+        padding: 18px 20px;
+        background-color: $theme-color;
+        background: linear-gradient(180deg, $theme-color 0%, $theme-color2 100%);
         border-radius: 100px;
-        border: 1px solid #293EEE;
-        transition: all 800ms linear 30s;
-
-        &:after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, #2C40F3 0%, rgba(0, 33, 209, 0.40) 100%);
-            transition: all 800ms linear 30s;
-            z-index: -1;
-
-        }
 
         &:hover {
-            color: $white-color;
+            background: linear-gradient(180deg, $theme-color2 0%, $theme-color 100%);
 
+            &:before,
             &:after {
-                background: linear-gradient(90deg, rgba(0, 33, 209, 0.40) 0%, #2C40F3 100%);
+                display: none;
             }
         }
     }

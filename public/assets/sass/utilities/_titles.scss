@@ -185,6 +185,122 @@
             }
         }
     }
+
+    &.sub-title5 {
+        position: relative;
+        font-family: $title-font;
+        font-size: 18px;
+        font-weight: 500;
+        background: linear-gradient(180deg, $theme-color 0%, $theme-color2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+        padding-left: 20px;
+
+        &::before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 25%;
+            height: 13px;
+            width: 13px;
+            border-radius: 50%;
+
+
+            @media(max-width: 450px) {
+                display: none;
+            }
+        }
+
+        &::before {
+            background: linear-gradient(180deg, $theme-color 0%, $theme-color2 100%);
+            margin-left: -1.2rem;
+
+
+        }
+
+        &::after {
+            background: linear-gradient(180deg, $theme-color 0%, $theme-color2 100%);
+            margin-left: 5px;
+        }
+
+        &.style1 {
+            background: $white-color;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            &:before,
+            &:after {
+                background: $white-color;
+            }
+        }
+    }
+
+    &.sub-title6 {
+        position: relative;
+        font-family: $title-font;
+        font-size: 18px;
+        font-weight: 500;
+        color: $theme-color;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+        padding-left: 20px;
+
+        &::before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 25%;
+            height: 13px;
+            width: 13px;
+            border-radius: 50%;
+            background: $theme-color;
+
+
+        }
+
+        &::before {
+            margin-left: -1.2rem;
+
+
+        }
+
+        &::after {
+            margin-left: 5px;
+        }
+
+        &.style1 {
+            background: $white-color;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            &:before,
+            &:after {
+                background: $white-color;
+            }
+        }
+    }
+
+    &.sub-title7 {
+        position: relative;
+        font-family: $body-font;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        background: linear-gradient(180deg, $theme-color 0%, $theme-color2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 25px;
+    }
 }
 
 .box-title {

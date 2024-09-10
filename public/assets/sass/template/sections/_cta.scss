@@ -525,10 +525,63 @@
 
 /* cta 10 end ---------------------*/
 
+/* cta 11 start -----------------------*/
+.cta-area11 {
+    background: #16181D;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    @include lg {
+        padding: 0 20px;
+    }
+
+}
+
+.newsletter-form {
+    &.style2 {
+        position: relative;
+        margin: auto;
+
+        i {
+            position: absolute;
+            top: 22px;
+            left: 30px;
+            color: var(--theme-color);
+        }
+
+        .form-control {
+            border-radius: 100px;
+            min-height: 56px;
+            padding-left: 55px;
+            padding-right: 200px;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .th-btn {
+            background-color: transparent;
+            background: var(--Theme-color, linear-gradient(180deg, var(--theme-color) 0%, var(--theme-color2) 100%));
+            min-width: 130px;
+            padding: 16px 35px;
+            border-radius: 100px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    }
+}
+
+.cta-text3 {
+    color: #A1A6B0;
+    margin-bottom: 40px;
+}
+
+/* cta 11 end -----------------------*/
+
 .download4-thumb {
     position: relative;
 
     .img1 {
+
         //min-width: 497px;
         img {
             filter: drop-shadow(1px 14px 70px rgba(62, 102, 243, 0.15));

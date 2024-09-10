@@ -1,15 +1,15 @@
 /* Testimonial Card ---------------------------------- */
 .testi-card {
-    background-color: $white-color;
-    border-radius: 10px;
-    padding: 40px;
     position: relative;
+    overflow: hidden;
+    max-width: 520px;
 
     &-area {
         position: relative;
         display: flex;
         justify-content: space-between;
         gap: 40px;
+        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -17,8 +17,10 @@
     &-slide {
         background-color: $white-color;
         border-radius: 10px;
-        padding: 40px;
+        padding: 40px 20px 40px 40px;
+        max-width: 600px;
         position: relative;
+        overflow: hidden;
     }
 
     &-tab {
@@ -66,8 +68,8 @@
 
     &_quote {
         position: absolute;
-        right: 40px;
-        bottom: 40px;
+        right: 10px;
+        bottom: 10px;
     }
 
     &_profile {
@@ -145,7 +147,9 @@
 
 @include vxs {
     .testi-card {
-        padding: 40px 20px;
+        &-slide {
+            padding: 30px 20px 30px 30px;
+        }
 
         &_name {
             font-size: 20px;
@@ -705,7 +709,7 @@
             }
 
             @include sm {
-                display: none;
+                display: none !important;
             }
         }
 
@@ -1564,6 +1568,8 @@
         position: absolute;
         top: 0;
         right: 0;
+
+
     }
 }
 
@@ -1766,5 +1772,396 @@
 
     img {
         border-radius: 20px;
+    }
+}
+
+/* testi-box8 start -------------------------------- */
+
+.testi-box8 {
+    position: relative;
+    background-color: $white-color;
+    border: 1px solid #E3E7F0;
+    border-radius: 30px;
+    padding: 40px 40px 40px 40px;
+    overflow: hidden;
+
+    &_text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-bottom: 45px;
+    }
+
+    &_author {
+
+        img {
+            width: 56px;
+            height: 56px;
+            background: $white-color;
+            border: 1px solid $white-color;
+            box-shadow: 0px -4px 22px rgba(45, 45, 45, 0.1);
+            border-radius: 50%;
+        }
+    }
+
+    &_profile {
+        display: flex;
+        gap: 15px;
+    }
+
+    .box-title {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    &_desig {
+        color: $theme-color;
+        font-size: 14px;
+        margin-bottom: -0.3rem;
+    }
+
+    .testi-quote {
+        position: absolute;
+        right: -12px;
+        bottom: -40px;
+        width: 150px;
+        height: 143px;
+        line-height: 100px;
+        padding: 0 10px;
+        background: $theme-color;
+        border-radius: 20px;
+        transform: rotate(45deg);
+        overflow: hidden;
+
+        @media(max-width: 380px) {
+            display: none;
+        }
+
+
+        img {
+            transform: rotate(316deg);
+        }
+
+    }
+}
+
+/* testi-box8 end -------------------------------- */
+
+/* testi-grid5 start -------------------------------- */
+
+.testi-grid5 {
+    position: relative;
+    text-align: center;
+    max-width: 563px;
+    display: block;
+    margin: auto;
+    z-index: 9;
+
+    &_img {
+        position: relative;
+        max-width: 80px;
+        display: block;
+        margin: auto auto 30px auto;
+
+        img {
+            width: 80px;
+            height: 80px;
+            mask-image: url(../img/shape/testi_shape.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: auto;
+        }
+    }
+
+    &_quote {
+        position: absolute;
+        top: 15%;
+        right: 42%;
+    }
+
+
+    .box-title {
+        color: $white-color;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    &_text {
+        font-size: 16px;
+        color: $white-color;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    &_desig {
+        color: #A1A6B0;
+        font-size: 14px;
+    }
+
+    &-thumb {
+        position: relative;
+        margin-top: -600px;
+        height: 575px;
+
+        @media(max-width: 990px) {
+            display: none;
+        }
+
+        @include xs {
+            margin-bottom: 50px;
+        }
+
+        .swiper-wrapper {
+            display: inline-flex;
+            visibility: visible;
+        }
+
+        .swiper-slide {
+            transition: 0.4s ease-in-out;
+            cursor: pointer;
+            content: "";
+            position: absolute;
+            margin: 0;
+            max-width: 80px;
+            height: 80px;
+
+            img {
+                width: 80px;
+                height: 80px;
+                mask-image: url(../img/shape/testi_shape.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                mask-repeat: no-repeat;
+                mask-position: center;
+                mask-size: auto;
+                transition: all 0.4s ease-in-out;
+            }
+
+            &:first-child {
+                top: 25%;
+                left: 15%;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                left: 5%;
+            }
+
+            &:nth-child(3) {
+                bottom: 5%;
+                left: 13%;
+            }
+
+            &:nth-child(4) {
+                top: 30%;
+                right: 10%;
+            }
+
+            &:nth-child(5) {
+                top: 55%;
+                right: 5%;
+            }
+
+            &:nth-child(6) {
+                bottom: 5%;
+                right: 13%;
+            }
+        }
+
+        .swiper-slide-thumb-active {
+            .box-img {
+                img {
+                    object-fit: cover;
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+}
+
+.testiSlider16 {
+    position: relative;
+    overflow: hidden;
+    margin: 0 -40px !important;
+
+    @include sm {
+        margin: 0 !important;
+    }
+}
+
+/* testi-grid5 end -------------------------------- */
+.testi-area18 {
+    background-color: #EFF1F9;
+}
+
+.testi-grid2-area {
+    &.style18 {
+        border: none;
+
+        .testi-grid2-thumb .box-img {
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+/* testi-grid5 start -------------------------------- */
+.testi-area19 {
+    max-width: 1620px;
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.video-box3 {
+    position: relative;
+    border-radius: 24px;
+
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img {
+        width: 100%;
+        border-radius: 24px;
+    }
+}
+
+.testi-card5 {
+    .box-review {
+        color: #FFBE11;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .box-text {
+        color: #A1A6B0;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .box-profile {
+        padding: 7px 20px 7px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+
+        .box-avater {
+            max-width: 40px;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .box-title {
+            color: $white-color;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .box-desig {
+            font-size: 14px;
+            line-height: 16px;
+            color: #A1A6B0;
+            display: block;
+            margin-bottom: -0.4rem;
+        }
+    }
+}
+
+/* testi-box9 start ------------------------- */
+.testiSlider20 {
+    position: relative;
+    overflow: hidden;
+    margin: 0 -60px !important;
+
+    @include sm {
+        margin: 0 !important;
+    }
+
+    .swiper-slide {
+        .testi-box9 {
+            opacity: 0.3;
+        }
+
+        &.swiper-slide-active {
+            .testi-box9 {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.testi-box9 {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: #16181D;
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+
+    @include md {
+        display: block;
+    }
+
+    .box-img {
+        min-width: 204px;
+        border-radius: 12px;
+
+        @include md {
+            min-width: 100%;
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+
+            @include md {
+                height: 250px;
+            }
+        }
+    }
+
+    .test-quote_wrapp {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .box-review {
+        i {
+            color: #FFBE11;
+        }
+    }
+
+    .box-title {
+        color: $white-color;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    .box-text {
+        font-weight: 400;
+        line-height: 26px;
+        color: #A1A6B0;
+        margin-bottom: 20px;
+
+    }
+
+
+    .box-desig {
+        color: #A1A6B0;
     }
 }
